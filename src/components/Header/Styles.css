@@ -1,0 +1,22 @@
+header{
+    @apply p-4 shadow-lg
+}
+.header-content{
+    @apply flex flex-col md:flex-row justify-between items-center
+}
+.left, .right{
+    @apply flex flex-row items-center text-lg my-2 md:my-0
+}
+.left{
+    @apply cursor-pointer gap-2
+}
+.right {
+    @apply gap-3
+}
+.right i{
+    @apply cursor-pointer
+}
+
+.right i:nth-child(1){
+    @apply hover:text-weather-primary duration-150 ease-in transition-all
+}
