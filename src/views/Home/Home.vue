@@ -1,13 +1,26 @@
 <template>
-  <h1>home</h1>
+  <main class="container">
+    <MapBox
+      :placesResultData="placesResultData"
+      @placesResultfn="placesResultCallback"
+      @pushToCityFn="pushToCity"
+    />
+  </main>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import './Styles.css';
+import fetchPlaces from './fetchPlaces'
+import MapBox from '@/components/MapBox/MapBox.vue';
+import getCityWeather from './getCityWeather';
 
 export default defineComponent({
-  name: 'Header',
-  
+    name: "Home",
+    components: { MapBox },
+    setup() {
+      const { placesResultData, placesResultCallback } = fetchPlaces()
+      const { pushToCity } = getCityWeather()
+      return { placesResultData, placesResultCallback, pushToCity }
+    }
 });
 </script>

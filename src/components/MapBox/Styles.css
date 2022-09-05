@@ -1,0 +1,23 @@
+.mapBox{
+    @apply my-3 relative
+}
+.mapBox input{
+    @apply 
+        bg-transparent
+        border-b-[1px] border-b-[rgba(255,255,255,0.5)] outline-none   
+        py-3 px-2 w-full
+        focus:border-b-[rgba(0,0,0,0.5)] focus:shadow-[0px_10px_12px_-1px_rgba(0,0,0,0.62)]
+        transition duration-300 ease-in
+}
+
+.mapBox ul{
+    @apply
+        bg-[rgba(0,0,0,0.3)] 
+        shadow-[0px_10px_12px_-1px_rgba(0,0,0,0.62)]
+}
+.mapBox ul li{
+    @apply
+        hover:bg-[rgba(255,255,255,0.5)] cursor-pointer
+        p-1
+        transition duration-300 ease-in
+}

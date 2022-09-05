@@ -1,0 +1,13 @@
+https://api.mapbox.com/geocoding/v5/${endpoint}/${search_text}.json?access_token=${access_token}&types=${types}
+endpoint = mapbox.places
+search_text=ref()
+access_token= pk.eyJ1Ijoic2FkZWs4OSIsImEiOiJjbDduYndnOWwwMmMzM3VvMTd3ZGQxazFuIn0.OSICzi7ZBopJD4_ohtipeA
+types = place
+
+
+openwether_api_key=d9e847e2bd4f83763ebd0187db1ddd74
+https://api.openweathermap.org/data/2.5/onecall?lat=29.91667&lon=29.91667&appid=d9e847e2bd4f83763ebd0187db1ddd74&units=emperial
+d9e847e2bd4f83763ebd0187db1ddd74
+
+latitude: 29.91667
+longitude: 29.91667
