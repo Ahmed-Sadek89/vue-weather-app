@@ -1,6 +1,6 @@
 .about-shadow{
-    @apply flex justify-center items-center w-full h-screen absolute top-0 left-0 
-    bg-black bg-opacity-40 z-50
+    @apply flex justify-center items-center w-full h-full absolute top-0 left-0 
+    bg-[rgba(0,0,0,0.3)] z-50
 }
 .about-content{
     @apply bg-white text-black p-4 mt-20 self-start max-w-xl mx-5 md:mx-0 z-50
