@@ -1,0 +1,24 @@
+<template>
+    <div class="tracker">
+        <div class="container">
+            <p>
+                You are currently previewing this city, click the "+"
+                icon to start tracking this city.
+            </p>
+        </div>
+    </div>
+</template>
+
+<script lang="ts">
+import { defineComponent } from 'vue'
+import './Styles.css';
+
+export default defineComponent({
+    name: "Tracker",
+    setup () {
+        
+
+        return {}
+    }
+})
+</script>

@@ -1,0 +1,71 @@
+/*  Weather-overview */
+.city-view .weather-overview {
+    @apply text-center flex flex-col justify-center items-center
+}
+
+.city-view .weather-overview h1{
+    @apply text-xl
+}
+
+.city-view .weather-overview h2{
+    @apply text-sm
+}
+
+.city-view .weather-overview h3{
+    @apply my-8 text-5xl font-bold
+}
+
+.city-view .weather-overview h4{
+    @apply text-sm
+}
+
+.city-view .weather-overview div{
+    @apply my-3 flex justify-center
+}
+
+.city-view .hr{
+    @apply border-white border-opacity-10 border w-full my-5
+}
+
+/*  Weather-hourly */
+.Weather-hourly .hourly-contents {
+    @apply flex flex-row overflow-x-scroll py-5 gap-10 items-center
+}
+
+.hourly-contents .each-hour{
+    @apply flex flex-col justify-start
+}
+
+.each-hour h1{
+    @apply whitespace-nowrap
+}
+
+.each-hour img{
+    @apply object-cover w-auto h-[50px]
+}
+
+/*  Weather-daily */
+.Weather-daily{
+    @apply pb-7
+}
+.Weather-daily h1{
+    @apply mb-4
+}
+.Weather-daily .Weather-daily-content{
+    @apply flex flex-col
+}
+.Weather-daily-content .Weather-this-day{
+    @apply flex flex-row justify-between items-center
+}
+.Weather-this-day .dayName{
+    @apply flex-1 flex justify-start
+}
+.Weather-this-day .dayIcon{
+    @apply flex-[2] flex justify-center
+}
+.Weather-this-day img{
+    @apply w-auto h-[50px]
+}
+.Weather-this-day .high-low{
+    @apply flex-1 flex justify-end
+}

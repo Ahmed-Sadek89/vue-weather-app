@@ -1,0 +1,3 @@
+.tracker{
+    @apply py-3 text-center bg-weather-secondary mb-7 text-sm md:text-base
+}

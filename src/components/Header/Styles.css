@@ -1,5 +1,5 @@
 header{
-    @apply p-4 shadow-lg
+    @apply p-4 shadow-xl
 }
 .header-content{
     @apply flex flex-col md:flex-row justify-between items-center

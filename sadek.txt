@@ -1,0 +1,4 @@
+`http://openweathermap.org/img/wn/${weatherData.current.weather[0].icon}@2x.png`
+`http://openweathermap.org/img/wn/${hourData.weather[0].icon}@2x.png
+`http://openweathermap.org/img/wn/${day.weather[0].icon}@2x.png`
+

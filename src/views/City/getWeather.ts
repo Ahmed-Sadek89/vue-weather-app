@@ -6,22 +6,17 @@ import weatherType from "@/Types/weather";
 
 const getWeather =  () => {
     const route = useRoute()
-    const loading = ref(false);
+    const loading = ref<boolean>(false);
     const weatherResult = ref<weatherType | null>(null);
     
+    const { longitude, latitude } = route.query
+    const api_key = 'd9e847e2bd4f83763ebd0187db1ddd74'
     const getWeatherData = async () => {
-        // const { state, city } = route.params;
-        const { longitude, latitude } = route.query
-        const api_key = 'd9e847e2bd4f83763ebd0187db1ddd74'
+        loading.value = true
         try{
-            loading.value = true
-            const weatherData = await axios.get(`
-                https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&appid=${api_key}&units=emperial
-            `)
-            console.log(weatherData.data)
-
-
-            weatherData.data ? loading.value = false : loading.value = true
+            const weatherData = await axios.get(`https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&appid=${api_key}&units=emperial`)
+            // console.log(weatherData.data)
+            weatherData.data ? loading.value = false : null  
             
              // cal current date & time
             const localOffset = new Date().getTimezoneOffset() * 60000;
@@ -32,24 +27,21 @@ const getWeather =  () => {
                 const utc = hour.dt * 1000 + localOffset;
                 hour.currentTime = utc + 1000 * weatherData.data.timezone_offset;
             });
-
-
+            
             weatherResult.value = weatherData.data;
 
         } catch(error) {
             loading.value = false
-            console.log(error)
+            console.log((error as Error).message)
+            // return (error as Error).message
         }
     }
-
-    // using closure algorithm to call the (getWeatherData()) function
-    const x = getWeatherData()
+    
     return { 
         route,
         getWeatherData,
         loading,
         weatherResult,
-        x
     }
 }
 
