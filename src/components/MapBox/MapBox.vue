@@ -7,15 +7,17 @@
             v-model="placesInput"
             @input="handleQuery"
         />
-        <ul v-show="placesResultData.length">
-            <li
-                v-for="index in placesResultData" 
-                :key="index.id"
-                @click="handlePushingtoCity(index)"
-            >
-                {{index.place_name}}
-            </li>
-        </ul>
+        <template v-if="placesResultData.length">
+            <ul>
+                <li
+                    v-for="index in placesResultData" 
+                    :key="index.id"
+                    @click="handlePushingtoCity(index)"
+                >
+                    {{index.place_name}}
+                </li>
+            </ul>
+        </template>
     </div>
 </template>
 

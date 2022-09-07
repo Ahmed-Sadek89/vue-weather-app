@@ -6,18 +6,18 @@
     <div class="text-center" v-if="error">
       something went wrong
     </div>
-    <div v-else class="city-view">
+    <div v-if="weatherResult" class="city-view">
       <!-- Weather Overview -->
-      <WeatherOverview :weatherResult="weatherResult" />
+      <WeatherOverview :weatherResult="weatherResult"  />
       <hr class="hr"/>
       <!-- Weather hourly -->
       <WeatherHourly :weatherResult="weatherResult" />
       <hr class="hr"/>
       <!-- Weather daily -->
-      <WeatherDaily :weatherResult="weatherResult" />
+      <WeatherDaily :weatherResult="weatherResult"  />
     </div>
     <div 
-      v-if="cityList" 
+      v-if="cityList && weatherResult" 
       class="text-lg pt-10 pb-16 flex flex-row justify-center items-center"
       @click="removeCityFromLS"
     >
@@ -67,17 +67,12 @@ export default defineComponent({
       })
       localStorage.setItem('savedCities', JSON.stringify(updatedCitiesInLS))
 
-      // 2- update the route queries, by removing cityList and add preview
-      // const preview = { preview: 'true' } ;
-      // const query = Object.assign( {}, route.query, preview );
-      // delete query.cityList;
+      // 2- push me to homepage
       router.push({ name: 'home' })
     }
 
     return {
-      
       cityList,
-      
       removeCityFromLS,
     };
   },

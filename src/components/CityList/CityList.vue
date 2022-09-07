@@ -1,6 +1,10 @@
 <template>
+    <div v-if="citiesInLS.length === 0">
+        no location added. to start tracking a location, search in the field above
+    </div>
     <div 
         className="cityList" 
+        v-else
         v-for="city in citiesInLS"
         :key="city.id"
     >
@@ -39,7 +43,6 @@ import './Styles.css';
 export default defineComponent({
     name: "CityList",
     props: {
-        
         city: {
             type: Object as PropType<savedCity>
         }
