@@ -1,6 +1,6 @@
 /*  Weather-overview */
 .city-view .weather-overview {
-    @apply text-center flex flex-col justify-center items-center
+    @apply text-center flex flex-col justify-center items-center mt-5
 }
 
 .city-view .weather-overview h1{

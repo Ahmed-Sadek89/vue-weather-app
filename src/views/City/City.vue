@@ -4,6 +4,7 @@
         <AsyncCityView
             :loading="loading"
             :weatherResult="weatherResult"
+            :error="error"
         />
     </div>
 </template>
@@ -15,19 +16,22 @@ import Tracker from '@/components/Tracker/Tracker.vue';
 import getWeather from './getWeather';
 
 export default defineComponent({
+    name: "City",
     setup () {
         const { 
             route,
             getWeatherData,
             loading,
-            weatherResult
+            weatherResult,
+            error
         } = getWeather();
         route.params.city && getWeatherData();
-        console.log(weatherResult)
+        // console.log(weatherResult)
         return { 
             getWeatherData, 
             loading, 
-            weatherResult
+            weatherResult,
+            error
         };
     },
     components: { AsyncCityView, Tracker }

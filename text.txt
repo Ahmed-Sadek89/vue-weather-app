@@ -11,3 +11,6 @@ d9e847e2bd4f83763ebd0187db1ddd74
 
 latitude: 29.91667
 longitude: 29.91667
+
+current weather api
+https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${apiKey}&units=emperial

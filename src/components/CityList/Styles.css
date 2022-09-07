@@ -1,0 +1,26 @@
+.cityList .cityCard{
+    @apply
+        bg-[rgba(0,0,0,0.3)] my-5 rounded-md px-2 py-3
+        flex flex-row justify-between items-center
+        cursor-pointer
+}
+.cityList .cityCard .left, .cityList .cityCard .right{
+    @apply flex flex-col     
+}
+
+.cityList .cityCard .left{ 
+    @apply items-start
+}
+.cityList .cityCard .right{
+    @apply items-end
+}
+
+.cityList .cityCard .left .cityName,
+.cityList .cityCard .right .cityDeg{
+    @apply text-lg font-bold
+} 
+
+.cityList .cityCard .left .cityState,
+.cityList .cityCard .right .minMax{
+    @apply text-xs
+} 

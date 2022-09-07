@@ -4,7 +4,7 @@
 @tailwind utilities;
 
 #app{
-    @apply min-h-screen w-full bg-weather-primary text-white capitalize
+    @apply min-h-screen w-full bg-weather-primary text-white capitalize min-h-screen
 }
 /* width */
 ::-webkit-scrollbar {
